@@ -5,13 +5,13 @@
 ;; Author: Matthew L. Fidler
 ;; Maintainer: Matthew L. Fidler
 ;; Created: Thu Feb  9 09:37:32 2012 (-0600)
-;; Version: 
-;; Last-Updated: 
-;;           By: 
-;;     Update #: 0
-;; URL: 
-;; Keywords: 
-;; Compatibility: 
+;; Version: 0.01
+;; Last-Updated: Thu Feb  9 11:44:01 2012 (-0600)
+;;           By: Matthew L. Fidler
+;;     Update #: 1
+;; URL: https://github.com/mlf176f2/ess-dnd
+;; Keywords: ESS, Drag and Drop
+;; Compatibility: Tested with Emacs 24.
 ;; 
 ;; Features that might be required by this library:
 ;;
