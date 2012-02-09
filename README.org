@@ -1,0 +1,14 @@
+#+TITLE: ESS Drag and Drop
+#+AUTHOR: Matthew L. Fidler
+* Introduction
+I would like to drag files onto a ESS buffer and write the appropriate
+code.  Enter ESS-drag and drop.
+
+#+BEGIN_SRC emacs-lisp
+(require 'ess-dnd)
+(ess-drag-and-drop-activate)
+#+END_SRC
+
+Currently it only supports R and CSV files but it is customizable.  If
+you have any generally useful code snippes you would like to add, let
+me know or send a pull request.
