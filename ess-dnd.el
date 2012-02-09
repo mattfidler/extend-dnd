@@ -6,9 +6,9 @@
 ;; Maintainer: Matthew L. Fidler
 ;; Created: Thu Feb  9 09:37:32 2012 (-0600)
 ;; Version: 0.01
-;; Last-Updated: Thu Feb  9 11:44:01 2012 (-0600)
+;; Last-Updated: Thu Feb  9 11:56:27 2012 (-0600)
 ;;           By: Matthew L. Fidler
-;;     Update #: 1
+;;     Update #: 2
 ;; URL: https://github.com/mlf176f2/ess-dnd
 ;; Keywords: ESS, Drag and Drop
 ;; Compatibility: Tested with Emacs 24.
@@ -95,8 +95,10 @@
 (defvar ess-drag-and-drop-active nil
   "Determines if ESS drag and drop is active.")
 
+;;;###autoload
 (defun ess-drag-and-drop-activate ()
   "Activates ess-drag-and-drop"
+  (interactive)
   (setq ess-drag-and-drop-active t))
 
 (defun ess-drag-and-drop (uri)
