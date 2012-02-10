@@ -6,9 +6,9 @@
 ;; Maintainer: Matthew L. Fidler
 ;; Created: Thu Feb  9 09:37:32 2012 (-0600)
 ;; Version: 0.01
-;; Last-Updated: Fri Feb 10 15:58:24 2012 (-0600)
+;; Last-Updated: Fri Feb 10 16:14:02 2012 (-0600)
 ;;           By: Matthew L. Fidler
-;;     Update #: 47
+;;     Update #: 49
 ;; URL: https://github.com/mlf176f2/extend-dnd
 ;; Keywords: EXTEND, Drag and Drop
 ;; Compatibility: Tested with Emacs 24.
@@ -254,7 +254,7 @@ The test for presence of the car of ELT-CONS is done with `equal'."
           (if mode-lst
 	      (progn
 		(setq mode-lst (cadr mode-lst))
-		(extend-add-to-alist 'mode-lst '(,ext ,key yasnippet))
+		(extend-add-to-alist 'mode-lst `(,ext ,key yasnippet))
 		(extend-add-to-alist 'extend-dnd-supported-files
 				     `(,f ,mode-lst)))
             (add-to-list 'extend-dnd-supported-files
