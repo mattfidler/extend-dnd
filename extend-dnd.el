@@ -6,9 +6,9 @@
 ;; Maintainer: Matthew L. Fidler
 ;; Created: Thu Feb  9 09:37:32 2012 (-0600)
 ;; Version: 0.01
-;; Last-Updated: Fri Feb 10 16:14:02 2012 (-0600)
+;; Last-Updated: Fri Feb 10 20:59:30 2012 (-0600)
 ;;           By: Matthew L. Fidler
-;;     Update #: 49
+;;     Update #: 52
 ;; URL: https://github.com/mlf176f2/extend-dnd
 ;; Keywords: EXTEND, Drag and Drop
 ;; Compatibility: Tested with Emacs 24.
@@ -82,8 +82,9 @@
 
 (defcustom extend-dnd-supported-files
   '((nxhtml-mode
-     (("jpg" "<img src=\"%s\">" format))
-     ))
+     (("jpg" "<img src=\"%s\">" format)
+      ("png" "<img src=\"%s\">" format)
+      ("gif" "<img src=\"%s\">" format))))
   "Extend Drag and Drop supported files in generic modes, other than `ess-mode'"
   :type '(repeat
 	  (list
@@ -95,8 +96,7 @@
 	     (choice
 	      (const format :tag "Format.  Should include one %s representing the file name")
 	      (const function :tag "Function")
-	      (const yasnippet :tag "Yasnippet (key of expansion)"))))
-	   )))
+	      (const yasnippet :tag "Yasnippet (key of expansion)")))))))
 
 (defcustom extend-dnd-ess-supported-files
   '(("S"
@@ -218,7 +218,7 @@
 
 
 ;;yas/load-snippet-buffer
-  
+
 ;; From http://lists.gnu.org/archive/html/bug-gnu-emacs/2001-02/msg00066.html
 (defun extend-add-to-alist (alist-var elt-cons &optional no-replace)
   "Add to the value of ALIST-VAR an element ELT-CONS if it isn't there yet.

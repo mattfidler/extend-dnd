@@ -49,3 +49,7 @@ write.csv(d,"${1:`yas/selected-text`}");
 
 #+END_SRC
 
+* Wish List/TODO
+** TODO Support dired mode
+** TODO Support inferior processes.
+** TODO Allow generic Yasnippet expansion by key name (like dnd_csv will automatically do drag and drop for csv files)
