@@ -17,7 +17,7 @@ Currently it only supports a few modes and extensions, but it is extendable.
 If you want extend-dnd to expand yasnippets based on the file name,
 make sure that =yas/wrap-around-region= is set to be ='t= or ='cua=.
 
-After define a snippet in the major mode you are working with, and put
+After you define a snippet in the major mode you are working with, and put
 the file name as `yas/selected-text'.  For example with R csv files
 you could define
 
