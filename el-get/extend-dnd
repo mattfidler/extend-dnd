@@ -1,0 +1,5 @@
+(:name extend-dnd
+ :description "extend-dnd"
+ :website "https://github.com/mlf176f2/extend-dnd"
+ :type git
+ :url "https://github.com/mlf176f2/extend-dnd.git")

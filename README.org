@@ -1,5 +1,27 @@
 #+TITLE: Extend Drag and Drop
 #+AUTHOR: Matthew L. Fidler
+* Library Information
+ /extend-dnd.el/ --- R drag and Drop
+
+ - Filename :: [[file:extend-dnd.el][extend-dnd.el]]
+ - Description :: R Drag and Drop
+ - Author :: Matthew L. Fidler
+ - Maintainer :: Matthew L. Fidler
+ - Created :: Thu Feb  9 09:37:32 2012 (-0600)
+ - Version :: 0.2
+ - Last-Updated :: Fri Feb 10 20:59:30 2012 (-0600)
+ -           By :: Matthew L. Fidler
+ -     Update # :: 52
+ - URL :: https://github.com/mlf176f2/extend-dnd
+ - Keywords :: EXTEND, Drag and Drop
+ - Compatibility :: Tested with Emacs 24.
+
+* Possible Dependencies
+
+  `assoc', `backquote', `button', `bytecomp', `cconv', `cl',
+  `dropdown-list', `easymenu', `help-fns', `help-mode',
+  `macroexp', `view', `warnings', `yasnippet', `yasnippet-bundle'.
+
 * Introduction
 I would like to drag files onto a ESS buffer and write the appropriate
 code.  Enter Extend drag and drop.
@@ -53,3 +75,29 @@ write.csv(d,"${1:`yas/selected-text`}");
 ** TODO Support dired mode
 ** TODO Support inferior processes.
 ** TODO Allow generic Yasnippet expansion by key name (like dnd_csv will automatically do drag and drop for csv files)
+* Functions
+** Interactive Functions
+
+** Internal Functions
+* Variables
+** Customizable Variables
+
+*** extend-dnd-dirs
+Drag and Drop Support for Directories.  Will process each file in the directory.
+
+*** extend-dnd-ess-supported-files
+Extend Drag and Drop supported files in Emacs Speaks Statistics
+
+*** extend-dnd-relative
+Use a relative directory.
+
+*** extend-dnd-supported-files
+Extend Drag and Drop supported files in generic modes, other than =ess-mode=
+
+** Internal Variables
+
+*** extend-dnd-active
+Determines if EXTEND drag and drop is active.
+* History
+
+ - 13-Dec-2012 ::  Use org-readme to publish  (Matthew L. Fidler)

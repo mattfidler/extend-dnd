@@ -1,0 +1,177 @@
+This is extend-dnd.info, produced by makeinfo version 4.13 from
+extend-dnd.texi.
+
+INFO-DIR-SECTION Emacs lisp libraries
+START-INFO-DIR-ENTRY
+* extend-dnd: (extend-dnd).     R Drag and Drop
+END-INFO-DIR-ENTRY
+
+
+File: extend-dnd.info,  Node: Top,  Next: Extend Drag and Drop,  Up: (dir)
+
+Top
+***
+
+* Menu:
+
+* Extend Drag and Drop::
+
+
+File: extend-dnd.info,  Node: Extend Drag and Drop,  Prev: Top,  Up: Top
+
+1 Extend Drag and Drop
+**********************
+
+Matthew L. Fidler ## Library Information _extend-dnd.el_ -- R drag and
+Drop
+
+   * *Filename* - extend-dnd.el
+
+   * *Description* - R Drag and Drop
+
+   * *Author* - Matthew L. Fidler
+
+   * *Maintainer* - Matthew L. Fidler
+
+   * *Created* - Thu Feb 9 09:37:32 2012 (-0600)
+
+   * *Version* - 0.2
+
+   * *Last-Updated* - Fri Feb 10 20:59:30 2012 (-0600)
+
+   * *By* - Matthew L. Fidler
+
+   * *Update #* - 52
+
+   * *URL* - https:__github.com_mlf176f2_extend-dnd
+
+   * *Keywords* - EXTEND, Drag and Drop
+
+   * *Compatibility* - Tested with Emacs 24.
+
+* Menu:
+
+* Possible Dependencies::
+* Introduction::
+* Status and Future::
+* Wish List/TODO::
+* History::
+
+
+File: extend-dnd.info,  Node: Possible Dependencies,  Next: Introduction,  Up: Extend Drag and Drop
+
+1.1 Possible Dependencies
+=========================
+
+`assoc','backquote', `button','bytecomp', `cconv','cl',
+`dropdown-list','easymenu', `help-fns','help-mode', `macroexp','view',
+`warnings','yasnippet', `yasnippet-bundle'.
+
+
+File: extend-dnd.info,  Node: Introduction,  Next: Status and Future,  Prev: Possible Dependencies,  Up: Extend Drag and Drop
+
+1.2 Introduction
+================
+
+I would like to drag files onto a ESS buffer and write the appropriate
+code. Enter Extend drag and drop. ## Installation To install, put the
+`extend-dnd.el' somewhere in your load path, and add the following
+lines to your startup file, usually `~/.emacs'
+
+(require 'extend-dnd) (extend-dnd-activate)
+
+
+File: extend-dnd.info,  Node: Status and Future,  Next: Wish List/TODO,  Prev: Introduction,  Up: Extend Drag and Drop
+
+1.3 Status and Future
+=====================
+
+Currently it only supports a few modes and extensions, but it is
+extendable. ## Working with Yasnippets If you want extend-dnd to expand
+yasnippets based on the file name, make sure that
+`yas/wrap-around-region' is set to be `'t' or `'cua'.
+
+After you define a snippet in the major mode you are working with, and
+put the file name as `yas/selected-text'. For example with R csv files
+you could define
+
+1:(concat "dat." (replace-regexp-in-string "(1)" ""
+(replace-regexp-in-string "[.]" "" (replace-regexp-in-string
+"[^A-Za-z.0-9]+" "." (file-name-sans-extension (file-name-nondirectory
+yas_text)) t t)))) <- read.csv("{1:`yas_selected-text'}");
+
+Then once this has been defined press `C-cC-d' to add the extension to
+the drag and drop list.
+
+The extension will be expanded based on the `key' value. Therefore, if
+you want more than one possible action for a particular file, give it
+the same key.
+
+For example, if you want the possibility to write to the csv you
+dragged in, you may wish to have the snippet:
+
+write.csv(d,"${1:`yas/selected-text'}");
+
+---------- Footnotes ----------
+
+(1) .
+
+
+File: extend-dnd.info,  Node: Wish List/TODO,  Next: History,  Prev: Status and Future,  Up: Extend Drag and Drop
+
+1.4 Wish List/TODO
+==================
+
+* Menu:
+
+* TODO Support dired mode::
+* TODO Support inferior processes::
+* TODO Allow generic Yasnippet expansion by key name like dnd_csv will automatically do drag and drop for csv files::
+
+
+File: extend-dnd.info,  Node: TODO Support dired mode,  Next: TODO Support inferior processes,  Up: Wish List/TODO
+
+1.4.1 TODO Support dired mode
+-----------------------------
+
+
+File: extend-dnd.info,  Node: TODO Support inferior processes,  Next: TODO Allow generic Yasnippet expansion by key name like dnd_csv will automatically do drag and drop for csv files,  Prev: TODO Support dired mode,  Up: Wish List/TODO
+
+1.4.2 TODO Support inferior processes.
+--------------------------------------
+
+
+File: extend-dnd.info,  Node: TODO Allow generic Yasnippet expansion by key name like dnd_csv will automatically do drag and drop for csv files,  Prev: TODO Support inferior processes,  Up: Wish List/TODO
+
+1.4.3 TODO Allow generic Yasnippet expansion by key name (like dnd_csv will automatically do drag and drop for csv files)
+-------------------------------------------------------------------------------------------------------------------------
+
+
+File: extend-dnd.info,  Node: History,  Prev: Wish List/TODO,  Up: Extend Drag and Drop
+
+1.5 History
+===========
+
+   * *13-Dec-2012* - Use org-readme to publish (Matthew L. Fidler)
+
+
+
+Tag Table:
+Node: Top209
+Node: Extend Drag and Drop331
+Node: Possible Dependencies1103
+Node: Introduction1431
+Node: Status and Future1896
+Ref: Status and Future-Footnote-13148
+Node: Wish List/TODO3155
+Node: TODO Support dired mode3503
+Node: TODO Support inferior processes3682
+Node: TODO Allow generic Yasnippet expansion by key name like dnd_csv will automatically do drag and drop for csv files4001
+Node: History4454
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:
