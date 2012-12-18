@@ -35,7 +35,7 @@ Drop
 
    * *Created* - Thu Feb 9 09:37:32 2012 (-0600)
 
-   * *Version* - 0.2
+   * *Version* - 0.4
 
    * *Last-Updated* - Fri Feb 10 20:59:30 2012 (-0600)
 
@@ -151,6 +151,8 @@ File: extend-dnd.info,  Node: History,  Prev: Wish List/TODO,  Up: Extend Drag a
 
 1.5 History
 ===========
+
+   * *18-Dec-2012* - Fixed yasnippet 0.8 problems (Matthew L. Fidler)
 
    * *13-Dec-2012* - Use org-readme to publish (Matthew L. Fidler)
 
