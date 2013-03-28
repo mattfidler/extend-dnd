@@ -8,7 +8,7 @@
  - Author :: Matthew L. Fidler
  - Maintainer :: Matthew L. Fidler
  - Created :: Thu Feb  9 09:37:32 2012 (-0600)
- - Version :: 0.4
+ - Version :: 0.5
  - Last-Updated :: Fri Feb 10 20:59:30 2012 (-0600)
  -           By :: Matthew L. Fidler
  -     Update # :: 52
@@ -78,61 +78,13 @@ write.csv(d,"${1:`yas/selected-text`}");
 * Functions
 ** Interactive Functions
 
-*** extend-dnd-activate
-=(extend-dnd-activate)=
-
-Activates extend-dnd
-
-*** extend-dnd-yas-add
-=(extend-dnd-yas-add)=
-
-Adds currently opened buffer to DND snippet list
-
 ** Internal Functions
-
-*** extend-add-to-alist
-=(extend-add-to-alist ALIST-VAR ELT-CONS &optional NO-REPLACE)=
-
-Add to the value of ALIST-VAR an element ELT-CONS if it isn't there yet.
-If an element with the same car as the car of ELT-CONS is already present,
-replace it with ELT-CONS unless NO-REPLACE is non-nil; if a matching
-element is not already present, add ELT-CONS to the front of the alist.
-The test for presence of the car of ELT-CONS is done with =equal=.
-
-*** extend-dnd
-=(extend-dnd URI)=
-
-Extended Drag and drop support
-
-*** extend-dnd-dir
-=(extend-dnd-dir DIR LIST)=
-
-Extended DND on a directory
-
-*** extend-dnd-file
-=(extend-dnd-file FILE TEXT TYPE)=
-
-Handle Drag and Drop for FILE of TYPE with TEXT
 * Variables
 ** Customizable Variables
 
-*** extend-dnd-dirs
-Drag and Drop Support for Directories.  Will process each file in the directory.
-
-*** extend-dnd-ess-supported-files
-Extend Drag and Drop supported files in Emacs Speaks Statistics
-
-*** extend-dnd-relative
-Use a relative directory.
-
-*** extend-dnd-supported-files
-Extend Drag and Drop supported files in generic modes, other than =ess-mode=
-
 ** Internal Variables
-
-*** extend-dnd-active
-Determines if EXTEND drag and drop is active.
 * History
 
+ - 28-Mar-2013 ::  When dragging in an org snippet with the latest emacs and org-mode, the buffer-file-name returns nil. Added extend-dnd-buffer-file-name to get the true buffer file name for calculation... (Matthew L. Fidler)
  - 18-Dec-2012 ::  Fixed yasnippet 0.8 problems (Matthew L. Fidler)
  - 13-Dec-2012 ::  Use org-readme to publish  (Matthew L. Fidler)

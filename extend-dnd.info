@@ -35,7 +35,7 @@ Drop
 
    * *Created* - Thu Feb 9 09:37:32 2012 (-0600)
 
-   * *Version* - 0.4
+   * *Version* - 0.5
 
    * *Last-Updated* - Fri Feb 10 20:59:30 2012 (-0600)
 
@@ -151,6 +151,11 @@ File: extend-dnd.info,  Node: History,  Prev: Wish List/TODO,  Up: Extend Drag a
 
 1.5 History
 ===========
+
+   * *28-Mar-2013* - When dragging in an org snippet with the latest
+     emacs and org-mode, the buffer-file-name returns nil. Added
+     extend-dnd-buffer-file-name to get the true buffer file name for
+     calculation... (Matthew L. Fidler)
 
    * *18-Dec-2012* - Fixed yasnippet 0.8 problems (Matthew L. Fidler)
 
