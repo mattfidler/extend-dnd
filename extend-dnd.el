@@ -237,7 +237,7 @@
 	      (insert f))
             (if (fboundp 'yas--expand-or-prompt-for-template)
                 (yas--expand-or-prompt-for-template templates)
-              (if (fbountp 'yas/expand-or-prompt-for-template)
+              (if (fboundp 'yas/expand-or-prompt-for-template)
                   (yas/expand-or-prompt-for-template templates))))))))))
 
 (defun extend-dnd-dir (dir list)
